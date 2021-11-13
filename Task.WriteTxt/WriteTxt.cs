@@ -12,6 +12,7 @@ namespace Task.WriteTxt
         {
             var _HashtableHandler = GetHashtableHandler();
             var _WriteTxtFileHandler = GetWriteTxtFileHandler();
+            _HashtableHandler.WritToHashtable("TxtName", "123");
             _WriteTxtFileHandler.WriteTxt();
         }
 

@@ -18,9 +18,8 @@ namespace Task.WriteTxt
             if (!task.hashtable.Contains(key)) {
                 task.hashtable.Add(key, value);
             }else {
-                task.HashtableKeyHaveExists();
+                task.HashtableKeyHaveExists(key);
             }
-
         }
     }
 }

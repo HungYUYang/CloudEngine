@@ -23,10 +23,10 @@ namespace CloudCore
             }
         }
 
-
-        public void HashtableKeyHaveExists()
+        public void HashtableKeyHaveExists(string key)
         {
-            _hashtable.Add("Error", "The key have exists");
+           
+            _hashtable.Add("Error", "The key[" + key + "] have exists");
         }
 
     }

@@ -19,8 +19,13 @@ namespace Task.WriteTxtUnitTests
             HashtableHandler _HashtableHandler = new HashtableHandler(task);
             // Act
             _HashtableHandler.WritToHashtable(key, value);
-            // Assert 不知道阿!!!!!
-            StringAssert.Contains("have exists", task.hashtable["Error"].ToString());
+
+            // Assert 驗證是否有執行HashtableKeyHaveExists,
+            task.Received().HashtableKeyHaveExists(key);
+
+            // 錯誤寫法,因為並沒有真正的new Task,這邊是new ITask
+            // 如果要使用這寫法驗證需要修改測試寫法
+            //StringAssert.Contains("have exists", task.hashtable["Error"].ToString());
         }
         [TestCase("ttt", "123", TestName = "Sample02")]
         public void WritToHashtable_KeyIsNotExists_ReturnValue(string key, string value)

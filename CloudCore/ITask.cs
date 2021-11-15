@@ -6,7 +6,6 @@ namespace CloudCore
     {
         Hashtable hashtable { get; }
         void Run();
-
-        void HashtableKeyHaveExists();
+        void HashtableKeyHaveExists(string key);
     }
 }
